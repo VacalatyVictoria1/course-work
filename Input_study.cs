@@ -25,7 +25,7 @@ namespace course_work
             check_enabled = 0;
            
         }
-        private void button_add_progress_Click(object sender, EventArgs e)
+        private void button_add_progress_Click(object sender, EventArgs e) 
         {
             if (count >= 5)
                 count = 0;
@@ -35,7 +35,7 @@ namespace course_work
             count++;
             Close();
         }
-        private void button_Cancel_Click(object sender, EventArgs e)
+        private void button_Cancel_Click(object sender, EventArgs e) 
         {
             check_enabled = 1;
             Close();
@@ -54,18 +54,22 @@ namespace course_work
                 }
             }
             e.Handled = !char.IsLetter(e.KeyChar);
-        }
+        } 
      
-        private void numeric_mark1_ValueChanged(object sender, EventArgs e)
+        private void numeric_mark1_ValueChanged(object sender, EventArgs e) 
         {
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) 
         {
 
         }
 
-        private void ComboBox_teacher_KeyPress(object sender, KeyPressEventArgs e)
+        private void comboBox_teacher_SelectedIndexChanged_1(object sender, EventArgs e)  
+        {
+
+        }
+        private void ComboBox_subject_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar.Equals('\b')) return;
             if (e.KeyChar.Equals(' ')) return;
@@ -80,6 +84,12 @@ namespace course_work
             }
             e.Handled = !char.IsLetter(e.KeyChar);
         }
+
+        private void Input_study_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

@@ -656,11 +656,11 @@
             // button_choose_subject
             // 
             this.button_choose_subject.ForeColor = System.Drawing.Color.DarkRed;
-            this.button_choose_subject.Location = new System.Drawing.Point(864, 31);
+            this.button_choose_subject.Location = new System.Drawing.Point(827, 29);
             this.button_choose_subject.Name = "button_choose_subject";
-            this.button_choose_subject.Size = new System.Drawing.Size(103, 33);
+            this.button_choose_subject.Size = new System.Drawing.Size(144, 33);
             this.button_choose_subject.TabIndex = 49;
-            this.button_choose_subject.Text = "Choose";
+            this.button_choose_subject.Text = "Выбрать";
             this.button_choose_subject.UseVisualStyleBackColor = true;
             this.button_choose_subject.Click += new System.EventHandler(this.button_choose_subject_Click);
             // 
@@ -778,9 +778,9 @@
             // 
             this.button_Delete.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_Delete.ForeColor = System.Drawing.Color.DarkRed;
-            this.button_Delete.Location = new System.Drawing.Point(436, 311);
+            this.button_Delete.Location = new System.Drawing.Point(436, 322);
             this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(129, 44);
+            this.button_Delete.Size = new System.Drawing.Size(141, 33);
             this.button_Delete.TabIndex = 50;
             this.button_Delete.Text = "Удалить";
             this.button_Delete.UseVisualStyleBackColor = true;
@@ -791,7 +791,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.ForeColor = System.Drawing.Color.Maroon;
-            this.label15.Location = new System.Drawing.Point(6, 275);
+            this.label15.Location = new System.Drawing.Point(6, 282);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(589, 24);
             this.label15.TabIndex = 49;
@@ -804,7 +804,7 @@
             this.button_check_password.ForeColor = System.Drawing.Color.DarkRed;
             this.button_check_password.Location = new System.Drawing.Point(436, 225);
             this.button_check_password.Name = "button_check_password";
-            this.button_check_password.Size = new System.Drawing.Size(129, 32);
+            this.button_check_password.Size = new System.Drawing.Size(141, 32);
             this.button_check_password.TabIndex = 48;
             this.button_check_password.Text = "Изменить";
             this.button_check_password.UseVisualStyleBackColor = true;
@@ -846,9 +846,9 @@
             this.button_search.Enabled = false;
             this.button_search.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_search.ForeColor = System.Drawing.Color.DarkRed;
-            this.button_search.Location = new System.Drawing.Point(436, 120);
+            this.button_search.Location = new System.Drawing.Point(436, 123);
             this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(129, 35);
+            this.button_search.Size = new System.Drawing.Size(141, 32);
             this.button_search.TabIndex = 2;
             this.button_search.Text = "Поиск";
             this.button_search.UseVisualStyleBackColor = true;
@@ -997,7 +997,8 @@
             this.MaximumSize = new System.Drawing.Size(1015, 528);
             this.MinimumSize = new System.Drawing.Size(1015, 528);
             this.Name = "Form1";
-            this.Text = "Student Database";
+            this.Text = "Database";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.Form1_HelpRequested_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.Menu.ResumeLayout(false);

@@ -46,7 +46,7 @@
             this.button_add_progress.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_add_progress.ForeColor = System.Drawing.Color.DarkRed;
             this.button_add_progress.Location = new System.Drawing.Point(78, 242);
-            this.button_add_progress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_add_progress.Margin = new System.Windows.Forms.Padding(4);
             this.button_add_progress.Name = "button_add_progress";
             this.button_add_progress.Size = new System.Drawing.Size(196, 66);
             this.button_add_progress.TabIndex = 37;
@@ -57,7 +57,7 @@
             // numeric_mark1
             // 
             this.numeric_mark1.Location = new System.Drawing.Point(291, 152);
-            this.numeric_mark1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numeric_mark1.Margin = new System.Windows.Forms.Padding(4);
             this.numeric_mark1.Maximum = new decimal(new int[] {
             5,
             0,
@@ -120,7 +120,7 @@
             this.button_Cancel.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_Cancel.ForeColor = System.Drawing.Color.DarkRed;
             this.button_Cancel.Location = new System.Drawing.Point(376, 242);
-            this.button_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(189, 66);
             this.button_Cancel.TabIndex = 38;
@@ -145,14 +145,21 @@
             "Фомин А.А.",
             "Панасюк И.В.",
             "Богданова Е.Н.",
-            "Федорова А.Ю."});
+            "Федорова А.Ю.",
+            "Скворцов Г.А.",
+            "Шоколадкин С.Ю.",
+            "Тряпкина Е.Ф.",
+            "Новиков Н.В.",
+            "Морозов А.К.",
+            "Павлов П.П.",
+            "Абрамова С.И."});
             this.comboBox_teacher.Location = new System.Drawing.Point(291, 96);
-            this.comboBox_teacher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_teacher.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_teacher.Name = "comboBox_teacher";
             this.comboBox_teacher.Size = new System.Drawing.Size(358, 32);
             this.comboBox_teacher.TabIndex = 39;
-
-            this.comboBox_teacher.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_teacher_KeyPress);
+            this.comboBox_teacher.SelectedIndexChanged += new System.EventHandler(this.comboBox_teacher_SelectedIndexChanged_1);
+            this.comboBox_teacher.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox_subject_KeyPress);
             // 
             // comboBox_subject
             // 
@@ -166,7 +173,21 @@
             "Основы компютерно-геометричного программирования",
             "Пакеты прикладных програм",
             "Налоговое право",
-            "История Украины и украинской культуры"});
+            "История Украины и украинской культуры",
+            "Культорология",
+            "Психология",
+            "Социология",
+            "Медиакультура ",
+            "Архитектура",
+            "Маркетинг ",
+            "Менеджмент ",
+            "Бухгалтерский учет ",
+            "Ботаника",
+            "Исследования в области дизайна",
+            "Философия",
+            "Журналистика",
+            "Экономика",
+            "Биотехнологи"});
             this.comboBox_subject.Location = new System.Drawing.Point(291, 31);
             this.comboBox_subject.Name = "comboBox_subject";
             this.comboBox_subject.Size = new System.Drawing.Size(358, 32);
@@ -188,11 +209,12 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(711, 401);
             this.MinimumSize = new System.Drawing.Size(711, 401);
             this.Name = "Input_study";
             this.Text = "Input_study";
+            this.Load += new System.EventHandler(this.Input_study_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numeric_mark1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,10 +31,9 @@ namespace course_work
             Menu.TabPages.Remove(tabPageEdit);
             button_check_password.Enabled = false;
             button_Delete.Enabled = false;
-           // Export_List_Teachers(); //подгружает данные в ComboBox  для выбора преподавателя
             richText.Text += "История действий:\n";
         }
-        //------------------------Functions-----------------------------
+        //------------------------Функции-----------------------------
         void Input_student()
         {
             student.Name = textBox_name.Text;
@@ -65,12 +64,12 @@ namespace course_work
         void Button_true()
         {
             // разблокировка кнопок
-            button_discipline.Enabled = true;
-            button_thebest.Enabled = true;
-            button_dupes.Enabled = true;
-            remove_losers.Enabled = true;
-            button_search.Enabled = true;
-            saveToolStripMenuItem.Enabled = true;
+            button_discipline.Enabled = true; //
+            button_thebest.Enabled = true; // найти отличника
+            button_dupes.Enabled = true; //
+            remove_losers.Enabled = true; // удалить двоешников
+            button_search.Enabled = true; // поиск в вкладке 
+            saveToolStripMenuItem.Enabled = true; // сохранить в тхт
         }
         void Fill_Form_Show()
         {
@@ -110,23 +109,7 @@ namespace course_work
                 average_mark[i] /= 5;
             }
         }
-        /*void Export_List_Teachers()
-        {
-            string path = "List of the teachers.txt";
-            BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open));
-            for (int i = 0; i < 10; i++)
-            {
-                if (reader.PeekChar() != -1)
-                {
-                    input.comboBox_teacher.Items.Add(reader.ReadString());
-                }
-                else
-                {
-                    reader.Close();
-                    break;
-                }
-            }
-        }*/
+
         void Generate_Password()
         {
             int pin;
@@ -476,7 +459,7 @@ namespace course_work
             dataGridView.Refresh();
             if (dataGridView.RowCount != n_row)
             {
-                DialogResult result = MessageBox.Show("данные о студентах успешно удаленны\n" +
+                DialogResult result = MessageBox.Show("Данные о студентах успешно удаленны\n" +
                                 "Вы хотите увидить таблицу?", "Отмена", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                     Menu.SelectedTab = Menu.TabPages[1];
@@ -512,7 +495,7 @@ namespace course_work
             }
         }
 
-        //!
+        
         private void button_add_Click(object sender, EventArgs e)
         {
             input.check_enabled = 0;
@@ -537,11 +520,11 @@ namespace course_work
                     MessageBox.Show("Ошибка ввода!.\nПовторите пожалуйста");
             }
         }
-        
+        //---------------------------Кнопки-----------------------
         private void button_password_Click_1(object sender, EventArgs e)
         {
             Generate_Password();
-           richText.Text += "пароль сгенерировали: " + textBox_password.Text + "\n";
+           richText.Text += "Пароль сгенерировали: " + textBox_password.Text + "\n";
         }
        
         private void button_dupes_Click(object sender, EventArgs e)
@@ -553,7 +536,7 @@ namespace course_work
         {
             Search_Student();
         }
-        
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Open_File_txt();
@@ -562,8 +545,7 @@ namespace course_work
             richText.Text += "Ваши данный из файла были открыты\n";
         }
 
-       
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) // сохранить в файл
         {
             Save_File_txt();
             MessageBox.Show("Файл сохранен");
@@ -616,12 +598,17 @@ namespace course_work
        
         private void Form1_HelpRequested_1(object sender, HelpEventArgs hlpevent)
         {
-            Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает Справку
+            // Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает Справку
+            Form2 Spravka = new Form2();
+            Spravka.ShowDialog();
         }
-        //!
+        
         private void referenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает справку
+            // Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает справку
+            Form2 Spravka = new Form2();
+            Spravka.ShowDialog();
+
         }
 
         //-------------------------------Checks----------------------------------------        
@@ -724,6 +711,11 @@ namespace course_work
         private void remove_losers_Click_2(object sender, EventArgs e)
         {
             Function_Remove();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
 
         private void edit_faculty_KeyPress(object sender, KeyPressEventArgs e)
