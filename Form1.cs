@@ -598,14 +598,12 @@ namespace course_work
        
         private void Form1_HelpRequested_1(object sender, HelpEventArgs hlpevent)
         {
-            // Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает Справку
             Form2 Spravka = new Form2();
             Spravka.ShowDialog();
         }
         
         private void referenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Process.Start(@"C:\Users\User\Downloads\Manual.chm"); // запускает справку
             Form2 Spravka = new Form2();
             Spravka.ShowDialog();
 
